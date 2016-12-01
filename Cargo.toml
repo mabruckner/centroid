@@ -1,0 +1,9 @@
+[package]
+name = "centroid"
+version = "0.1.0"
+authors = ["Mitchell Bruckner <mbruckner807@gmail.com>"]
+
+[dependencies]
+nalgebra="0.8.2"
+stl =  { git = "https://github.com/mabruckner/rust-stl.git", rev = "e9526f3"}
+clap = "2.10.2"
