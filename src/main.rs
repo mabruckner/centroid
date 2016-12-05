@@ -40,7 +40,11 @@ fn main() {
         [atob(x[0]), atob(x[1]), atob(x[2])]
     });
 
-    let (volume, centroid) = centroid::collection_vals(&mut thing);
+    let (volume, centroid, moment) = centroid::collection_vals(&mut thing);
     println!("Volume: {}", volume);
     println!("Centroid:\n\tx: {}\n\ty: {}\n\tz: {}", centroid.x, centroid.y, centroid.z);
+    println!("Moment of Inertia:");
+    for r in 0..3 {
+        println!("\t[{}\t{}\t{}]", moment[(r,0)], moment[(r,1)], moment[(r,2)]);
+    }
 }
